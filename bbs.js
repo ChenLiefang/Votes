@@ -10,7 +10,7 @@ const http = require('http')
 const https = require('https')
 const fs = require('fs')
 const fsp = require('fs').promises
-const compression = require('compression');
+
 const _ = require('lodash')
 
 const app = express()
@@ -71,7 +71,7 @@ dbPromise.then(value => {
 
 app.locals.pretty = true //美化页面
 
-app.use(compression())
+
 
 //解决跨域问题
 app.use(cors({
