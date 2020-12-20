@@ -71,6 +71,8 @@ dbPromise.then(value => {
 
 app.locals.pretty = true //美化页面
 
+app.use(compression())
+
 //解决跨域问题
 app.use(cors({
     maxAge: 86400,
